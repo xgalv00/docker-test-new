@@ -1,5 +1,5 @@
 vm:
-  - size: 12G
+  - size: 1G
   - type: linode
 environment:
   TEST_VAL=42
