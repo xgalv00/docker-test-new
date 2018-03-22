@@ -1,10 +1,23 @@
 vm:
   - size: 1G
-  - type: linode
+  - volume_size: 28G
 environment:
   TEST_VAL=42
+ready_wait:
+  120
 post_install:
   stuff-service:
     - echo hello world
     - echo TEST_VAL is $TEST_VAL
     - echo domain is $DYNDEPLOY_DOMAIN
+compose_files:
+  - docker-compose-alternate.yml
+  - Dockerfile-alternate
+context_path:
+  './stuff'
+dockerfileonly:
+  false
+port_forwarding:
+  true
+non_bash_commands:
+  false
