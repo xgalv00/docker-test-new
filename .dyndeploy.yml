@@ -11,8 +11,18 @@ post_install:
     - echo TEST_VAL is $TEST_VAL
     - echo domain is $DYNDEPLOY_DOMAIN
 compose_files:
-  - docker-compose-alternate.yml
-  - Dockerfile-alternate
+  name1:
+    filename:
+      docker-compose-alternate.yml
+    context_path:
+      './'
+  name2:
+    filename:
+      Dockerfile-alternate
+    context_path:
+      './stuff'
+no_default_compose_file:
+  true
 context_path:
   './stuff'
 dockerfileonly:
