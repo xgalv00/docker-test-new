@@ -9,19 +9,19 @@ pre_launch:
   - target: 'stuff-service'
     command: cp
     docker: true
-    options: './test {{target}}:/'
+    options: './test {target}:/'
 post_launch:
   - target: 'stuff-service'
     command: exec
     docker: true
-    options: '-it {{target}} echo hello world'
+    options: '-it {target} echo hello world'
   - target: 'stuff-service'
     command: run
     docker: false
-    options: '{{target}} echo TEST_VAL is $TEST_VAL'
+    options: '{target} echo TEST_VAL is $TEST_VAL'
   - target: 'stuff-service'
     command: exec
-    options: '{{target}} echo domain is $DYNDEPLOY_DOMAIN'
+    options: '{target} echo domain is $DYNDEPLOY_DOMAIN'
 compose_files:
   name1:
     filename:
