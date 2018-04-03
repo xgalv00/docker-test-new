@@ -1,6 +1,3 @@
-vm:
-  - size: 1G
-  - volume_size: 28G
 environment:
   TEST_VAL=42
 ready_wait:
@@ -39,13 +36,3 @@ compose_files:
       80:8080
     dockerimage:
       plone1
-no_default_compose_file:
-  true
-context_path:
-  ./stuff
-dockerfileonly:
-  false
-dockerimage:
-  plone
-port_forwarding:
-  80:80
