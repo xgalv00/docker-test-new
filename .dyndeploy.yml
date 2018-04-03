@@ -5,29 +5,47 @@ environment:
   TEST_VAL=42
 ready_wait:
   120
-post_install:
-  stuff-service:
-    - echo hello world
-    - echo TEST_VAL is $TEST_VAL
-    - echo domain is $DYNDEPLOY_DOMAIN
+pre_launch:
+  - target: 'stuff-service'
+    command: cp
+    docker: true
+    options: './test {{target}}:/'
+post_launch:
+  - target: 'stuff-service'
+    command: exec
+    docker: true
+    options: '-it {{target}} echo hello world'
+  - target: 'stuff-service'
+    command: run
+    docker: false
+    options: '{{target}} echo TEST_VAL is $TEST_VAL'
+  - target: 'stuff-service'
+    command: exec
+    options: '{{target}} echo domain is $DYNDEPLOY_DOMAIN'
 compose_files:
   name1:
     filename:
       docker-compose-alternate.yml
-    context_path:
-      './'
+    build_options:
+      website
+    run_options:
+      website
   name2:
     filename:
       Dockerfile-alternate
     context_path:
-      './stuff'
+      ./stuff
+    port_forwarding:
+      80:8080
+    dockerimage:
+      plone1
 no_default_compose_file:
   true
 context_path:
-  './stuff'
+  ./stuff
 dockerfileonly:
   false
+dockerimage:
+  plone
 port_forwarding:
-  true
-non_bash_commands:
-  false
+  80:80
