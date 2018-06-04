@@ -7,21 +7,22 @@ compose_files:
     filename:
       ./stuff/Dockerfile
     dockerfileonly: true
+    run_options: --env TEST_VAL2=${SQUASH_BRANCH_WITH_ID}
     context_path: ./stuff
 post_launch:
   - target: 'stuff-service'
     command: exec
     docker: true
-    options: '-it {target} echo domain is $SQUASH_DOMAIN'
+    options: -it {target} bash -c 'echo domain is $SQUASH_DOMAIN'
   - target: 'stuff-service'
     command: exec
     docker: true
-    options: '-it {target} echo branch id is $SQUASH_BRANCH_WITH_ID'
+    options: -it {target} bash -c 'echo branch id is $SQUASH_BRANCH_WITH_ID'
   - target: 'stuff-service'
     command: exec
     docker: true
-    options: '-it {target} echo TEST_VAL2 is $TEST_VAL2'
+    options: -it {target} bash -c 'echo TEST_VAL2 is $TEST_VAL2'
   - target: 'stuff-service'
     command: exec
     docker: true
-    options: '-it {target} echo TEST_VAL is $TEST_VAL'
+    options: -it {target} bash -c 'echo TEST_VAL is $TEST_VAL'
