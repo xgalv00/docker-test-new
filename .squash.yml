@@ -72,7 +72,7 @@ deployments:
     ready_wait:
       120
     dockerfilename:
-      ./stuff/DockerfileB
+      ./stuff/DockerfileC
     dockerfileonly: true
     run_options: --env TEST_VAL2=${SQUASH_DOMAIN}
     context_path: ./stuff
