@@ -1,5 +1,6 @@
 deployments:
   default:
+    vm_size: 1G
     environment:
       TEST_VAL=42
     ready_wait: 120
@@ -21,6 +22,7 @@ deployments:
         docker: true
         options: -it {target} bash -c 'echo TEST_VAL is $TEST_VAL'
   branch:
+    vm_size: 1
     environment:
       TEST_VAL=42
     ready_wait:
@@ -53,6 +55,7 @@ deployments:
         docker: true
         options: -it {target} bash -c 'echo TEST_VAL is $TEST_VAL'
   branchA:
+    vm_size: 6
     environment:
       TEST_VAL=4242
     ready_wait:
@@ -72,6 +75,7 @@ deployments:
         docker: true
         options: -it {target} bash -c 'echo TEST_VAL is $TEST_VAL'
   branchB:
+    vm_size: 8GB
     environment:
       TEST_VAL=424242
     ready_wait:
