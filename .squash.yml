@@ -32,6 +32,11 @@ deployments:
     dockerfileonly: true
     run_options: --env TEST_VAL2=${SQUASH_BRANCH_WITH_ID}
     context_path: ./stuff
+    subdomains:
+      Awesome Name:
+        - awesomedomain,/?que=99764QQ
+      Awesomness x2:
+         - subd,/abc
     pre_launch:
       - target: 'stuff-service'
         command: exec
