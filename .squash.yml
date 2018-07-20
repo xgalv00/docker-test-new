@@ -37,6 +37,8 @@ deployments:
         - awesomedomain,/?que=99764QQ
       Awesomness x2:
          - subd,/abc
+      Awesomness x3:
+         - plain
     pre_launch:
       - target: 'stuff-service'
         command: exec
