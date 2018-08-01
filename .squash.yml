@@ -4,6 +4,7 @@ deployments:
     environment:
       TEST_VAL=42
     ready_wait: 120
+    backend_wait: 20
     post_launch:
       - target: 'stuff-service'
         command: exec
