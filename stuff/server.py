@@ -10,7 +10,7 @@ app = Flask(__name__)
 def activate_job():
     def run_job():
         while True:
-            logging.warning("Run recurring task")
+            # logging.warning("Run recurring task")
             time.sleep(0.25)
 
     thread = threading.Thread(target=run_job)

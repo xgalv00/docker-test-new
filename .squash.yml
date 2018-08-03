@@ -6,10 +6,10 @@ deployments:
     ready_wait: 120
     backend_wait: 20
     pre_terminate:
-      - ./src/scripts/script-11.sh
+      - uname -a
       - ./src/scripts/script-2.sh
       - stuff-service:
-        - ./src/scripts/script-3.sh
+        - cat ~/.bashrc
     post_launch:
       - target: 'stuff-service'
         command: exec
