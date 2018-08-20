@@ -4,6 +4,9 @@ services:
     build: ./stuff
     ports:
       - 80:80
+    subdomain_port_mapping:
+      - test:81
+      - another-test:8000
     environment:
       - TEST_VAL
       - SQUASH_BRANCH_WITH_ID
