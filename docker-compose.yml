@@ -8,3 +8,21 @@ services:
       - TEST_VAL
       - SQUASH_BRANCH_WITH_ID
       - SQUASH_DOMAIN
+
+  stuff-service2:
+    build: ./stuff
+    ports:
+      - 81:80
+    environment:
+      - TEST_VAL
+      - SQUASH_BRANCH_WITH_ID
+      - SQUASH_DOMAIN
+
+  stuff-service3:
+    build: ./stuff
+    ports:
+      - 8000:80
+    environment:
+      - TEST_VAL
+      - SQUASH_BRANCH_WITH_ID
+      - SQUASH_DOMAIN
