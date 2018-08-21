@@ -5,6 +5,9 @@ deployments:
       TEST_VAL=42
     ready_wait: 120
     backend_wait: 20
+    subdomain_port_mapping:
+      - test:81
+      - another-test:8000
     pre_terminate:
       - uname -a
       - ./src/scripts/script-2.sh
