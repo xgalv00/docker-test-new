@@ -7,7 +7,9 @@ deployments:
     backend_wait: 20
     subdomain_port_mapping:
       - test:81
+      - test--test:81
       - another-test:8000
+      - and--another-test:8000
     pre_terminate:
       - uname -a
       - ./src/scripts/script-2.sh
