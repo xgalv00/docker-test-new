@@ -10,7 +10,9 @@ services:
       - SQUASH_DOMAIN
 
   stuff-service2:
-    build: ./stuff
+    build:
+      context: ./stuff
+      dockerfile: DockerfileA
     ports:
       - 81:80
     environment:
@@ -19,7 +21,9 @@ services:
       - SQUASH_DOMAIN
 
   stuff-service3:
-    build: ./stuff
+    build:
+      context: ./stuff
+      dockerfile: DockerfileB
     ports:
       - 8000:80
     environment:
