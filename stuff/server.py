@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import threading
 import time
 import logging
@@ -24,6 +24,7 @@ def index():
 
 @app.route('/about')
 def about():
+    logging.warning(request.referrer)
     return '<body>This is the about page</body>'
 
 
