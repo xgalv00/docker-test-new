@@ -6,4 +6,5 @@ services:
       - 80:80
     environment:
       - TEST_VAL
-      - DYNDEPLOY_DOMAIN
+      - SQUASH_BRANCH_WITH_ID
+      - SQUASH_DOMAIN

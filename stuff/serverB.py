@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 import threading
 import time
 import logging
@@ -10,7 +10,7 @@ app = Flask(__name__)
 def activate_job():
     def run_job():
         while True:
-            # logging.warning("Run recurring task")
+            logging.warning("Run recurring task")
             time.sleep(0.25)
 
     thread = threading.Thread(target=run_job)
@@ -19,12 +19,11 @@ def activate_job():
 
 @app.route('/')
 def index():
-    return '<body>Hello world. <a href="/about/">About this page</a>.</body>'
+    return '<body>Hello world from DOCKER B. <a href="/about/">About this page</a>.</body>'
 
 
 @app.route('/about')
 def about():
-    logging.warning(request.referrer)
     return '<body>This is the about page</body>'
 
 
