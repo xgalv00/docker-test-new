@@ -5,6 +5,7 @@ deployments:
       TEST_VAL=42
     ready_wait: 120
     backend_wait: 20
+    vm_storage_gb: 10
     subdomain_port_mapping:
       - test:81
       - test--test:81
