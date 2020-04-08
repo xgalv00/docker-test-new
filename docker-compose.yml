@@ -8,3 +8,6 @@ services:
       - TEST_VAL
       - SQUASH_BRANCH_WITH_ID
       - SQUASH_DOMAIN
+      - TEST_REPO_DEPLOYMENT
+      - TEST_REPO
+      - TEST_DEPLOYMENT
