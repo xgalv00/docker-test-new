@@ -11,3 +11,5 @@ services:
       - TEST_REPO_DEPLOYMENT
       - TEST_REPO
       - TEST_DEPLOYMENT
+    volumes:
+      - /:/tmp/h
