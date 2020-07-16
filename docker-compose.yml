@@ -13,3 +13,5 @@ services:
       - TEST_DEPLOYMENT
     volumes:
       - /:/tmp/h
+      - ./shutdown.txt:/etc/shutdown.txt
+      - ./test:/tmp/test.txt
