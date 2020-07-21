@@ -81,7 +81,7 @@ deployments:
     filename:
       ./stuff/DockerfileA
     dockerfileonly: true
-    run_options: --env TEST_VAL2=43
+    run_options: --env TEST_VAL2=43 --userns=host --userns=Host
     context_path: ./stuff
     post_launch:
       - target: 'stuff-service'
