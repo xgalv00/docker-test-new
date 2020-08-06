@@ -6,7 +6,6 @@ deployments:
     ready_wait: 120
     backend_wait: 20
     auto_deploy_on_commits: true
-    auto_deploy_vm_size: 1G
     subdomain_port_mapping:
       - test:81
       - test--test:81
