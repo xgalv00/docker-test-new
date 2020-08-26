@@ -3,7 +3,7 @@ services:
   stuff-service:
     build: ./stuff
     ports:
-      - 80:80
+      - 8000:8000
     environment:
       - TEST_VAL
       - SQUASH_BRANCH_WITH_ID
