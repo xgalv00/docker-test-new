@@ -6,17 +6,6 @@ import logging
 app = Flask(__name__)
 
 
-@app.before_first_request
-def activate_job():
-    def run_job():
-        while True:
-            # logging.warning("Run recurring task")
-            time.sleep(0.25)
-
-    thread = threading.Thread(target=run_job)
-    thread.start()
-
-
 @app.route('/')
 def index():
     return '<body>Hello world. <a href="/about/">About this page</a>.</body>'
