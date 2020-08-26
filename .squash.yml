@@ -1,18 +1,13 @@
 deployments:
   default:
     vm_size: 4G
-    port_forwarding: "8000:8000"
+    port_forwarding: "8000:80"
     environment:
       TEST_VAL=42
     ready_wait: 120
     backend_wait: 20
     auto_deploy_on_commits: true
     auto_deploy_vm_size: 1G
-    subdomain_port_mapping:
-      - test:81
-      - test--test:81
-      - another-test:8000
-      - and--another-test:8000
     pre_terminate:
       - uname -a
       - ./src/scripts/script-2.sh
