@@ -1,6 +1,7 @@
 deployments:
   default:
     vm_size: 4G
+    port_forwarding: "8000:8000"
     environment:
       TEST_VAL=42
     ready_wait: 120
