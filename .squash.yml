@@ -1,9 +1,7 @@
 deployments:
   default:
     vm_size: 4G
-    filename:
-      ./docker-compose.yml
-    port_forwarding: "8000:80"
+    port_forwarding: 8000:8000
     environment:
       TEST_VAL=42
     ready_wait: 120
