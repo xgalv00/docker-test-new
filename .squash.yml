@@ -1,5 +1,5 @@
 deployments:
   default:
     vm_size: 4G
-    port_forwarding: 8000:8000
+    port_forwarding: "8000:8000"
     ready_wait: 120
