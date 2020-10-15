@@ -8,7 +8,8 @@ deployments:
     auto_deploy_on_commits: true
     auto_deploy_vm_size: 1G
     build_policy:
-      wait_time: 15m
+      wait_time: 5m
+      auto_cancel: true
     subdomain_port_mapping:
       - test:81
       - test--test:81
