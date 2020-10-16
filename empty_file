@@ -3,3 +3,4 @@ check auto_cancel
 trigger check
 trigger check push
 tirgger check push / pull
+trigger check push/pull 1
