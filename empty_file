@@ -10,3 +10,4 @@ auto cancel pull
 auto cancel pull 1
 auto cancel pull 2
 wait_time discard pull
+production test
