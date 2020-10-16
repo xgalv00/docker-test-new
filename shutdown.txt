@@ -2,3 +2,4 @@ Shutdown pr test
 Shutdown pr test 2
 Shutdown pr test 3
 Shutdown pr test 4
+just commit
