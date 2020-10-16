@@ -10,6 +10,7 @@ deployments:
     build_policy:
       wait_time: 5m
       auto_cancel: true
+      triggers: pr
     subdomain_port_mapping:
       - test:81
       - test--test:81
