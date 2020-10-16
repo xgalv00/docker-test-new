@@ -7,3 +7,4 @@ trigger check push/pull 1
 trigger check push/pull 2
 trigger check push/pull 3
 auto cancel pull
+auto cancel pull 1
