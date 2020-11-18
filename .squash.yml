@@ -8,7 +8,7 @@ deployments:
     auto_deploy_on_commits: true
     auto_deploy_vm_size: 1G
     build_policy:
-      triggers: pr
+      triggers: pr[master, dev]
     subdomain_port_mapping:
       - test:81
       - test--test:81
