@@ -3,3 +3,4 @@ trigger check for production by commit
 no check deployment for pr
 no check deployment for pr
 check trigger correctness
+should be skipped
